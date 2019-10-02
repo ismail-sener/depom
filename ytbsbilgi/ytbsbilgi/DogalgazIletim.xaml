@@ -65,13 +65,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="242,264" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap:VirtualizedContainerService.HintSize="242,270" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="DogalGazIletim_TasimaCikis" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="DogalGazIletim_TasimaCikis" sap:VirtualizedContainerService.HintSize="592,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Default="INSERT INTO [LET].[DogalgazIletimTasimaMiktari] ([GazGunu],[GazCikisMiktari])VALUES(@GazGunu,@GazCikisMiktari)" Name="sqlString" />
                 <Variable x:TypeArguments="sd:DataTable" Name="tasimaCikisMiktari" />
@@ -242,7 +242,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </Sequence>
-            <Sequence DisplayName="DogalGazIletim_SanalTicaret_Transfer" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence DisplayName="DogalGazIletim_SanalTicaret_Transfer" sap:VirtualizedContainerService.HintSize="592,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Default="INSERT INTO [LET].[DogalgazIletimSanalTicaretTransfer] ([GazGunu],[TransferMiktari])VALUES(@GazGunu,@TransferMiktari)" Name="sqlString" />
                 <Variable x:TypeArguments="sd:DataTable" Name="sanalTicaretTransfer" />
