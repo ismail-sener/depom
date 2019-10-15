@@ -44,6 +44,7 @@
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="1036,1480" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -88,14 +89,14 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="606,1005" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="745,1691" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="568,778" sap2010:WorkflowViewState.IdRef="Sequence_52">
+          <Sequence sap:VirtualizedContainerService.HintSize="568,1018" sap2010:WorkflowViewState.IdRef="Sequence_52">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -133,7 +134,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:InvokeCode>
-                    <Sequence DisplayName="Doğalgaz Verileri" sap:VirtualizedContainerService.HintSize="304,807" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence DisplayName="Doğalgaz Verileri" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -254,7 +255,7 @@
                                       </ActivityAction>
                                     </ui:BrowserScope.Body>
                                   </ui:BrowserScope>
-                                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="foreach(DataRow row in dtSTP_GRF.Rows)&#xD;&#xA;                {&#xD;&#xA;                 &#xD;&#xA;                     DataRow dr = dtDogalgazVerileri.NewRow();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(row[&quot;Gaz Günü&quot;].ToString().Contains(&quot;Aritmetik&quot;) || row[&quot;Gaz Günü&quot;].ToString().Contains(&quot;Bulunamadı&quot;))&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;continue;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dr[0] = DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;)).ToShortDateString(); &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dr[1] = Convert.ToDecimal(row[&quot;GRF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                    dr[2] =0;&#xD;&#xA;                     dr[3] = 0;&#xD;&#xA;                      dr[4] = 0;&#xD;&#xA;                       dr[5] =0;&#xD;&#xA;                       dr[6] = 0;&#xD;&#xA;                       dr[7] = 0;&#xD;&#xA;                        dr[8] = 0;&#xD;&#xA;                        dr[9] = 0;&#xD;&#xA;                           &#xD;&#xA;                            dtDogalgazVerileri.Rows.Add(dr);&#xD;&#xA;                        &#xD;&#xA;                    }" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="foreach(DataRow row in dtSTP_GRF.Rows)&#xA;                {&#xA;                 &#xA;                     DataRow dr = dtDogalgazVerileri.NewRow();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(row[&quot;Gaz Günü&quot;].ToString().Contains(&quot;Aritmetik&quot;) || row[&quot;Gaz Günü&quot;].ToString().Contains(&quot;Bulunamadı&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;continue;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dr[0] = DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;)).ToShortDateString(); &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dr[1] = Convert.ToDecimal(row[&quot;GRF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                    dr[2] =0;&#xA;                     dr[3] = 0;&#xA;                      dr[4] = 0;&#xA;                       dr[5] =0;&#xA;                       dr[6] = 0;&#xA;                       dr[7] = 0;&#xA;                        dr[8] = 0;&#xA;                        dr[9] = 0;&#xA;                           &#xA;                            dtDogalgazVerileri.Rows.Add(dr);&#xA;                        &#xA;                    }" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                                     <ui:InvokeCode.Arguments>
                                       <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtDogalgazVerileri">
                                         <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">dtDogalgazVerileriInit</mca:CSharpReference>
@@ -392,7 +393,7 @@
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                 </Sequence>
-                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="         foreach(DataRow row in dtSTPFiyat.Rows)&#xD;&#xA;                {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(row[&quot;GÖF&quot;].ToString().Contains(&quot;Aritmetik&quot;) || row[&quot;GÖF&quot;].ToString().Contains(&quot;Bulunamadı&quot;))&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;continue;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;                            bool bulundu = false;&#xD;&#xA;                            for (int a = 0; a &lt; dtDogalgazVerileri.Rows.Count; a++)&#xD;&#xA;                            {&#xD;&#xA;                              &#xD;&#xA;&#xD;&#xA;                               if (Convert.ToDateTime(dtDogalgazVerileri.Rows[a][0]) == DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;)))&#xD;&#xA;                                {&#xD;&#xA;                                     dtDogalgazVerileri.Rows[a][2] = Convert.ToDecimal(row[&quot;GÖF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GÖF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                               &#x9;&#x9; dtDogalgazVerileri.Rows[a][3] = Convert.ToDecimal(row[&quot;GİF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GİF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                &#x9; dtDogalgazVerileri.Rows[a][4] = Convert.ToDecimal(row[&quot;GEF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GEF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                &#x9; dtDogalgazVerileri.Rows[a][5] = Convert.ToDecimal(row[&quot;AOF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;AOF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                    bulundu = true;&#xD;&#xA;                                }&#xD;&#xA;                            }&#xD;&#xA;                            if (!bulundu)&#xD;&#xA;                            {&#xD;&#xA;                                DataRow dr = dtDogalgazVerileri.NewRow();&#xD;&#xA;                                dr[0] =  DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;));&#xD;&#xA;                                dr[1] =0;&#xD;&#xA;                                dr[2] =Convert.ToDecimal(row[&quot;GÖF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GÖF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                dr[3] =Convert.ToDecimal(row[&quot;GİF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GİF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                dr[4] = Convert.ToDecimal(row[&quot;GEF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GEF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                dr[5] =  Convert.ToDecimal(row[&quot;AOF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;AOF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                dr[6] = 0;&#xD;&#xA;                                dr[7] = 0;&#xD;&#xA;                                dr[8] = 0;&#xD;&#xA;                                dr[9] = 0;&#xD;&#xA;                                dtDogalgazVerileri.Rows.Add(dr);&#xD;&#xA;                            }&#xD;&#xA;                }" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="476,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="         foreach(DataRow row in dtSTPFiyat.Rows)&#xA;                {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(row[&quot;GÖF&quot;].ToString().Contains(&quot;Aritmetik&quot;) || row[&quot;GÖF&quot;].ToString().Contains(&quot;Bulunamadı&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;continue;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;                            bool bulundu = false;&#xA;                            for (int a = 0; a &lt; dtDogalgazVerileri.Rows.Count; a++)&#xA;                            {&#xA;                              &#xA;&#xA;                               if (Convert.ToDateTime(dtDogalgazVerileri.Rows[a][0]) == DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;)))&#xA;                                {&#xA;                                     dtDogalgazVerileri.Rows[a][2] = Convert.ToDecimal(row[&quot;GÖF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GÖF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                               &#x9;&#x9; dtDogalgazVerileri.Rows[a][3] = Convert.ToDecimal(row[&quot;GİF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GİF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                &#x9; dtDogalgazVerileri.Rows[a][4] = Convert.ToDecimal(row[&quot;GEF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GEF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                &#x9; dtDogalgazVerileri.Rows[a][5] = Convert.ToDecimal(row[&quot;AOF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;AOF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                    bulundu = true;&#xA;                                }&#xA;                            }&#xA;                            if (!bulundu)&#xA;                            {&#xA;                                DataRow dr = dtDogalgazVerileri.NewRow();&#xA;                                dr[0] =  DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;));&#xA;                                dr[1] =0;&#xA;                                dr[2] =Convert.ToDecimal(row[&quot;GÖF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GÖF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                dr[3] =Convert.ToDecimal(row[&quot;GİF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GİF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                dr[4] = Convert.ToDecimal(row[&quot;GEF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;GEF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                dr[5] =  Convert.ToDecimal(row[&quot;AOF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;AOF&quot;].ToString(),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                dr[6] = 0;&#xA;                                dr[7] = 0;&#xA;                                dr[8] = 0;&#xA;                                dr[9] = 0;&#xA;                                dtDogalgazVerileri.Rows.Add(dr);&#xA;                            }&#xA;                }" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="476,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
                                   <ui:InvokeCode.Arguments>
                                     <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtDogalgazVerileri">
                                       <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">dtDogalgazVerileriInit</mca:CSharpReference>
@@ -419,7 +420,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="552,1514" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" NewSession="True" Private="False" Url="https://seffaflik.epias.com.tr/transparency/dogalgaz/stp/stp-dgf.xhtml">
+                        <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" NewSession="True" Private="False" Url="https://seffaflik.epias.com.tr/transparency/dogalgaz/stp/stp-dgf.xhtml">
                           <ui:OpenBrowser.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
@@ -524,7 +525,7 @@
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                 </Sequence>
-                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="         foreach(DataRow row in dtDengelemeGazi.Rows)&#xD;&#xA;                {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(row[&quot;İDAF&quot;].ToString().Contains(&quot;Aritmetik&quot;) || row[&quot;İDAF&quot;].ToString().Contains(&quot;Bulunamadı&quot;))&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;continue;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;                            bool bulundu = false;&#xD;&#xA;                            for (int a = 0; a &lt; dtDogalgazVerileri.Rows.Count; a++)&#xD;&#xA;                            {&#xD;&#xA;                              &#xD;&#xA;&#xD;&#xA;                               if (Convert.ToDateTime(dtDogalgazVerileri.Rows[a][0]) == DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;)))&#xD;&#xA;                                {&#xD;&#xA;                                     dtDogalgazVerileri.Rows[a][6] = Convert.ToDecimal(row[&quot;İDAF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;İDAF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                               &#x9;&#x9; dtDogalgazVerileri.Rows[a][7] = Convert.ToDecimal(row[&quot;İDSF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;İDSF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                &#x9; dtDogalgazVerileri.Rows[a][8] = Convert.ToDecimal(row[&quot;DGAF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;DGAF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                &#x9; dtDogalgazVerileri.Rows[a][9] = Convert.ToDecimal(row[&quot;DGSF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;DGSF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                    bulundu = true;&#xD;&#xA;                                }&#xD;&#xA;                            }&#xD;&#xA;                            if (!bulundu)&#xD;&#xA;                            {&#xD;&#xA;                                DataRow dr = dtDogalgazVerileri.NewRow();&#xD;&#xA;                                dr[0] =  DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;));&#xD;&#xA;                                dr[1] =0;&#xD;&#xA;                                dr[2] =0;&#xD;&#xA;                                dr[3] =0;&#xD;&#xA;                                dr[4] =0;&#xD;&#xA;                                dr[5] = 0;&#xD;&#xA;                                dr[6] = Convert.ToDecimal(row[&quot;İDAF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;İDAF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                dr[7] =Convert.ToDecimal(row[&quot;İDSF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;İDSF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                dr[8] = Convert.ToDecimal(row[&quot;DGAF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;DGAF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                dr[9] =Convert.ToDecimal(row[&quot;DGSF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;DGSF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xD;&#xA;                                dtDogalgazVerileri.Rows.Add(dr);&#xD;&#xA;                            }&#xD;&#xA;                }" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="476,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="         foreach(DataRow row in dtDengelemeGazi.Rows)&#xA;                {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if(row[&quot;İDAF&quot;].ToString().Contains(&quot;Aritmetik&quot;) || row[&quot;İDAF&quot;].ToString().Contains(&quot;Bulunamadı&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;continue;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;                            bool bulundu = false;&#xA;                            for (int a = 0; a &lt; dtDogalgazVerileri.Rows.Count; a++)&#xA;                            {&#xA;                              &#xA;&#xA;                               if (Convert.ToDateTime(dtDogalgazVerileri.Rows[a][0]) == DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;)))&#xA;                                {&#xA;                                     dtDogalgazVerileri.Rows[a][6] = Convert.ToDecimal(row[&quot;İDAF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;İDAF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                               &#x9;&#x9; dtDogalgazVerileri.Rows[a][7] = Convert.ToDecimal(row[&quot;İDSF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;İDSF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                &#x9; dtDogalgazVerileri.Rows[a][8] = Convert.ToDecimal(row[&quot;DGAF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;DGAF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                &#x9; dtDogalgazVerileri.Rows[a][9] = Convert.ToDecimal(row[&quot;DGSF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;DGSF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                    bulundu = true;&#xA;                                }&#xA;                            }&#xA;                            if (!bulundu)&#xA;                            {&#xA;                                DataRow dr = dtDogalgazVerileri.NewRow();&#xA;                                dr[0] =  DateTime.ParseExact(row[&quot;Gaz Günü&quot;].ToString(), &quot;dd/MM/yyyy&quot;, new System.Globalization.CultureInfo(&quot;en-US&quot;));&#xA;                                dr[1] =0;&#xA;                                dr[2] =0;&#xA;                                dr[3] =0;&#xA;                                dr[4] =0;&#xA;                                dr[5] = 0;&#xA;                                dr[6] = Convert.ToDecimal(row[&quot;İDAF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;İDAF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                dr[7] =Convert.ToDecimal(row[&quot;İDSF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;İDSF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                dr[8] = Convert.ToDecimal(row[&quot;DGAF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;DGAF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                dr[9] =Convert.ToDecimal(row[&quot;DGSF&quot;].ToString() == &quot;-&quot; ? &quot;0&quot; : row[&quot;DGSF&quot;].ToString().Replace(&quot;*&quot;,&quot;&quot;),System.Globalization.CultureInfo.GetCultureInfo(&quot;tr-TR&quot;));&#xA;                                dtDogalgazVerileri.Rows.Add(dr);&#xA;                            }&#xA;                }" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="476,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
                                   <ui:InvokeCode.Arguments>
                                     <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dtDogalgazVerileri">
                                       <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">dtDogalgazVerileriInit</mca:CSharpReference>
@@ -545,7 +546,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:OpenBrowser>
                       </Sequence>
-                      <Sequence DisplayName="Dogalgaz Verileri Kaydet" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence DisplayName="Dogalgaz Verileri Kaydet" sap:VirtualizedContainerService.HintSize="468,420" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1075,7 +1076,7 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1055" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1095" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1177,7 +1178,7 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1055" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1095" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1279,7 +1280,7 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1055" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1095" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1478,81 +1479,90 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,328" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-                          <ui:ForEachRow.Body>
-                            <ActivityAction x:TypeArguments="sd:DataRow">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_48">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="INSERT INTO [LET].[BarajVeriler_2]([Tarih],[Havza],[Baraj],[BulunduguSehir],[GunlukKot],[AktifDoluluk],[AktifHacim],[GunlukHacim],[SuyunEnerjiKarsiligi],[MaxKot],[MinKot],[MaxHacim],[MinHacim],[UniteDebisi],[KuruluGuc])  VALUES  (@Tarih,@Havza,@Baraj,@BulunduguSehir,@GunlukKot,@AktifDoluluk,@AktifHacim,@GunlukHacim,@SuyunEnerjiKarsiligi,@MaxKot,@MinKot,@MaxHacim,@MinHacim,@UniteDebisi,@KuruluGuc)">
-                                  <ui:ExecuteNonQuery.ExistingDbConnection>
-                                    <InArgument x:TypeArguments="ui:DatabaseConnection">
-                                      <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">dbConnect</mca:CSharpValue>
-                                    </InArgument>
-                                  </ui:ExecuteNonQuery.ExistingDbConnection>
-                                  <ui:ExecuteNonQuery.Parameters>
-                                    <InArgument x:TypeArguments="sds:SqlDateTime" x:Key="Tarih">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">DateTime.Now.Date;</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Havza">
-                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">row["Havza"].ToString()</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Baraj">
-                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">row["Baraj"].ToString()</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="BulunduguSehir">
-                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">row["BulunduguSehir"].ToString()</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="GunlukKot">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">Convert.ToDecimal(row["GunlukKot"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="AktifDoluluk">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">Convert.ToDecimal(row["AktifDoluluk"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="AktifHacim">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">Convert.ToDecimal(row["AktifHacim"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="GunlukHacim">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">Convert.ToDecimal(row["GunlukHacim"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="SuyunEnerjiKarsiligi">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">Convert.ToDecimal(row["SuyunEnerjiKarsiligi"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxKot">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">Convert.ToDecimal(row["MaxKot"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinKot">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">Convert.ToDecimal(row["MinKot"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxHacim">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">Convert.ToDecimal(row["MaxHacim"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinHacim">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">Convert.ToDecimal(row["MinHacim"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="UniteDebisi">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">Convert.ToDecimal(row["UniteDebisi"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="KuruluGuc">
-                                      <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">Convert.ToDecimal(row["KuruluGuc"].ToString())</mca:CSharpValue>
-                                    </InArgument>
-                                  </ui:ExecuteNonQuery.Parameters>
-                                </ui:ExecuteNonQuery>
-                              </Sequence>
-                            </ActivityAction>
-                          </ui:ForEachRow.Body>
-                          <ui:ForEachRow.DataTable>
-                            <InArgument x:TypeArguments="sd:DataTable">
-                              <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">dtBarajVerileriInit</mca:CSharpValue>
+                        <If sap:VirtualizedContainerService.HintSize="571,476" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If.Condition>
+                            <InArgument x:TypeArguments="x:Boolean">
+                              <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">DateTime.ParseExact(dtAktifDoluluk.Rows[0]["Tarih"].ToString(), "dd/MM/yyyy", new System.Globalization.CultureInfo("en-US")).DayOfYear==DateTime.Now.DayOfYear</mca:CSharpValue>
                             </InArgument>
-                          </ui:ForEachRow.DataTable>
-                        </ui:ForEachRow>
+                          </If.Condition>
+                          <If.Then>
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,328" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="INSERT INTO [LET].[BarajVeriler_2]([Tarih],[Havza],[Baraj],[BulunduguSehir],[GunlukKot],[AktifDoluluk],[AktifHacim],[GunlukHacim],[SuyunEnerjiKarsiligi],[MaxKot],[MinKot],[MaxHacim],[MinHacim],[UniteDebisi],[KuruluGuc])  VALUES  (@Tarih,@Havza,@Baraj,@BulunduguSehir,@GunlukKot,@AktifDoluluk,@AktifHacim,@GunlukHacim,@SuyunEnerjiKarsiligi,@MaxKot,@MinKot,@MaxHacim,@MinHacim,@UniteDebisi,@KuruluGuc)">
+                                      <ui:ExecuteNonQuery.ExistingDbConnection>
+                                        <InArgument x:TypeArguments="ui:DatabaseConnection">
+                                          <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">dbConnect</mca:CSharpValue>
+                                        </InArgument>
+                                      </ui:ExecuteNonQuery.ExistingDbConnection>
+                                      <ui:ExecuteNonQuery.Parameters>
+                                        <InArgument x:TypeArguments="sds:SqlDateTime" x:Key="Tarih">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">DateTime.Now.Date;</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Havza">
+                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">row["Havza"].ToString()</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Baraj">
+                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">row["Baraj"].ToString()</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="BulunduguSehir">
+                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">row["BulunduguSehir"].ToString()</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="GunlukKot">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">Convert.ToDecimal(row["GunlukKot"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="AktifDoluluk">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">Convert.ToDecimal(row["AktifDoluluk"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="AktifHacim">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">Convert.ToDecimal(row["AktifHacim"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="GunlukHacim">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">Convert.ToDecimal(row["GunlukHacim"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="SuyunEnerjiKarsiligi">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">Convert.ToDecimal(row["SuyunEnerjiKarsiligi"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxKot">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">Convert.ToDecimal(row["MaxKot"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinKot">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">Convert.ToDecimal(row["MinKot"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxHacim">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">Convert.ToDecimal(row["MaxHacim"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinHacim">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">Convert.ToDecimal(row["MinHacim"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="UniteDebisi">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">Convert.ToDecimal(row["UniteDebisi"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="KuruluGuc">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">Convert.ToDecimal(row["KuruluGuc"].ToString())</mca:CSharpValue>
+                                        </InArgument>
+                                      </ui:ExecuteNonQuery.Parameters>
+                                    </ui:ExecuteNonQuery>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                              <ui:ForEachRow.DataTable>
+                                <InArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">dtBarajVerileriInit</mca:CSharpValue>
+                                </InArgument>
+                              </ui:ForEachRow.DataTable>
+                            </ui:ForEachRow>
+                          </If.Then>
+                        </If>
                       </Sequence>
                     </Sequence>
                   </Sequence>
