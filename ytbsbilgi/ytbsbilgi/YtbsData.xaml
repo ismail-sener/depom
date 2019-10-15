@@ -7,7 +7,7 @@
   <sap:VirtualizedContainerService.HintSize>654,859</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="7">
+    <scg:List x:TypeArguments="x:String" Capacity="14">
       <x:String>System</x:String>
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Data</x:String>
@@ -15,6 +15,7 @@
       <x:String>System.Text</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Database</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -65,620 +66,637 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,291" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,533" sap2010:WorkflowViewState.IdRef="TryCatch_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="680,2664" sap2010:WorkflowViewState.IdRef="Sequence_33">
+          <Sequence sap:VirtualizedContainerService.HintSize="526,306" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="638,1257" sap2010:WorkflowViewState.IdRef="Sequence_22">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="596,1165" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Private="False" Url="https://ytbs.teias.gov.tr/">
-                <ui:OpenBrowser.Body>
-                  <ActivityAction x:TypeArguments="x:Object">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                    </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="562,1066" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="fileName" />
-                      </Sequence.Variables>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap:VirtualizedContainerService.HintSize="520,974" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,882" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="dtTarih" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                            <ui:Click.CursorPosition>
-                              <ui:CursorPosition Position="Center">
-                                <ui:CursorPosition.OffsetX>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetX>
-                                <ui:CursorPosition.OffsetY>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetY>
-                              </ui:CursorPosition>
-                            </ui:Click.CursorPosition>
-                            <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2926acc1c2d47820619a6c6142b45fa0" Selector="&lt;webctrl aaname=' &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;' parentid='loginForm' tag='IMG' /&gt;" WaitForReady="INTERACTIVE">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                              </ui:Target>
-                            </ui:Click.Target>
-                          </ui:Click>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,324" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                            <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <If sap:VirtualizedContainerService.HintSize="484,214" sap2010:WorkflowViewState.IdRef="If_4">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_117">DateTime.Now.Hour&gt;15</mca:CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="638,1257" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="596,1165" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Private="False" Url="https://ytbs.teias.gov.tr/">
+                      <ui:OpenBrowser.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                          </ActivityAction.Argument>
+                          <Sequence sap:VirtualizedContainerService.HintSize="562,1066" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="fileName" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence sap:VirtualizedContainerService.HintSize="520,974" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,882" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="dtTarih" />
+                                </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey 'INPUT  formdash:bitisTa...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="a" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
-                                  <ui:SendHotkey.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="38f129819c560113f7ee1f535929bcb1" Selector="&lt;webctrl id='formdash:bitisTarihi2_input' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2926acc1c2d47820619a6c6142b45fa0" Selector="&lt;webctrl aaname=' &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;' parentid='loginForm' tag='IMG' /&gt;" WaitForReady="INTERACTIVE">
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />
                                       </ui:Target.TimeoutMS>
                                     </ui:Target>
-                                  </ui:SendHotkey.Target>
-                                </ui:SendHotkey>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,324" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey 'INPUT  formdash:bitisTa...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="a" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
+                                        <ui:SendHotkey.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="38f129819c560113f7ee1f535929bcb1" Selector="&lt;webctrl id='formdash:bitisTarihi2_input' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                          </ui:Target>
+                                        </ui:SendHotkey.Target>
+                                      </ui:SendHotkey>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                </ui:CommentOut>
+                                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  formdash:bitisTa...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="436,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True">
+                                  <ui:TypeInto.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5da0de8934bca2b2b5373fe672aa9f00" Selector="&lt;webctrl id='formdash:bitisTarihi2_input' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
+                                  </ui:TypeInto.Target>
+                                  <ui:TypeInto.Text>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd")</mca:CSharpValue>
+                                    </InArgument>
+                                  </ui:TypeInto.Text>
+                                </ui:TypeInto>
+                                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e6948c4355254c1bf721538e5185cdce" Selector="&lt;webctrl name='formdash:j_idt35' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
                               </Sequence>
-                            </ui:CommentOut.Body>
-                          </ui:CommentOut>
-                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  formdash:bitisTa...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="436,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True">
-                            <ui:TypeInto.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5da0de8934bca2b2b5373fe672aa9f00" Selector="&lt;webctrl id='formdash:bitisTarihi2_input' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                              </ui:Target>
-                            </ui:TypeInto.Target>
-                            <ui:TypeInto.Text>
-                              <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd")</mca:CSharpValue>
-                              </InArgument>
-                            </ui:TypeInto.Text>
-                          </ui:TypeInto>
-                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="436,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                            <ui:Click.CursorPosition>
-                              <ui:CursorPosition Position="Center">
-                                <ui:CursorPosition.OffsetX>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetX>
-                                <ui:CursorPosition.OffsetY>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:CursorPosition.OffsetY>
-                              </ui:CursorPosition>
-                            </ui:Click.CursorPosition>
-                            <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e6948c4355254c1bf721538e5185cdce" Selector="&lt;webctrl name='formdash:j_idt35' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                              </ui:Target>
-                            </ui:Click.Target>
-                          </ui:Click>
-                        </Sequence>
-                      </Sequence>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:OpenBrowser.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:OpenBrowser>
-            </Sequence>
-            <Assign sap:VirtualizedContainerService.HintSize="638,60" sap2010:WorkflowViewState.IdRef="Assign_7">
-              <Assign.To>
-                <OutArgument x:TypeArguments="ui:GenericValue">
-                  <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">dtTarih</mca:CSharpReference>
-                </OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="ui:GenericValue">
-                  <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd")</mca:CSharpValue>
-                </InArgument>
-              </Assign.Value>
-            </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="638,60" sap2010:WorkflowViewState.IdRef="Assign_8">
-              <Assign.To>
-                <OutArgument x:TypeArguments="ui:GenericValue">
-                  <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">fileName</mca:CSharpReference>
-                </OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="ui:GenericValue">
-                  <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">"GENEL_GUNLUK_ISLETME_NETICESI_"+dtTarih</mca:CSharpValue>
-                </InArgument>
-              </Assign.Value>
-            </Assign>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Delay_2">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Delay>
-            <Sequence DisplayName="YtbsRaporlar" sap:VirtualizedContainerService.HintSize="638,1013" sap2010:WorkflowViewState.IdRef="Sequence_32">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,921" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" MacroSetting="ReadFromExcelSettings">
-                <ui:ExcelApplicationScope.Body>
-                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,812" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="sd:DataTable" Name="dtrpr273" />
-                        <Variable x:TypeArguments="x:String" Name="dt273out" />
-                        <Variable x:TypeArguments="sd:DataTable" Name="dtRapor232" />
-                        <Variable x:TypeArguments="sd:DataTable" Name="dtRapor202" />
-                        <Variable x:TypeArguments="sd:DataTable" Name="dtRapor209" />
-                      </Sequence.Variables>
+                            </Sequence>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:OpenBrowser.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_5" Range="A3:E23" SheetName="Rapor273">
-                        <ui:ExcelReadRange.DataTable>
-                          <OutArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">dtrpr273</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:ExcelReadRange.DataTable>
-                      </ui:ExcelReadRange>
-                      <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="B3" SheetName="Rapor232">
-                        <ui:ExcelReadRange.DataTable>
-                          <OutArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">dtRapor232</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:ExcelReadRange.DataTable>
-                      </ui:ExcelReadRange>
-                      <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_7" Range="B4:D10" SheetName="Rapor202">
-                        <ui:ExcelReadRange.DataTable>
-                          <OutArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">dtRapor202</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:ExcelReadRange.DataTable>
-                      </ui:ExcelReadRange>
-                      <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" Range="A4" SheetName="Rapor209">
-                        <ui:ExcelReadRange.DataTable>
-                          <OutArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">dtRapor209</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:ExcelReadRange.DataTable>
-                      </ui:ExcelReadRange>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="Rapor273-ForEach" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,477" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,385" sap2010:WorkflowViewState.IdRef="TryCatch_6">
-                                <TryCatch.Variables>
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="sd" />
-                                </TryCatch.Variables>
-                                <TryCatch.Finally>
-                                  <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="ui:GenericValue">
-                                        <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">sd</mca:CSharpReference>
-                                      </OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="ui:GenericValue">
-                                        <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">1</mca:CSharpValue>
-                                      </InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </TryCatch.Finally>
-                                <TryCatch.Try>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    </ui:OpenBrowser>
+                  </Sequence>
+                  <Assign sap:VirtualizedContainerService.HintSize="638,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="ui:GenericValue">
+                        <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">dtTarih</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="ui:GenericValue">
+                        <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd")</mca:CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="638,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="ui:GenericValue">
+                        <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">fileName</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="ui:GenericValue">
+                        <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">"GENEL_GUNLUK_ISLETME_NETICESI_"+dtTarih</mca:CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Delay_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Delay>
+                  <Sequence DisplayName="YtbsRaporlar" sap:VirtualizedContainerService.HintSize="638,1013" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,921" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" MacroSetting="ReadFromExcelSettings">
+                      <ui:ExcelApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,812" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="sd:DataTable" Name="dtrpr273" />
+                              <Variable x:TypeArguments="x:String" Name="dt273out" />
+                              <Variable x:TypeArguments="sd:DataTable" Name="dtRapor232" />
+                              <Variable x:TypeArguments="sd:DataTable" Name="dtRapor202" />
+                              <Variable x:TypeArguments="sd:DataTable" Name="dtRapor209" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_5" Range="A3:E23" SheetName="Rapor273">
+                              <ui:ExcelReadRange.DataTable>
+                                <OutArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">dtrpr273</mca:CSharpReference>
+                                </OutArgument>
+                              </ui:ExcelReadRange.DataTable>
+                            </ui:ExcelReadRange>
+                            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="B3" SheetName="Rapor232">
+                              <ui:ExcelReadRange.DataTable>
+                                <OutArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">dtRapor232</mca:CSharpReference>
+                                </OutArgument>
+                              </ui:ExcelReadRange.DataTable>
+                            </ui:ExcelReadRange>
+                            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_7" Range="B4:D10" SheetName="Rapor202">
+                              <ui:ExcelReadRange.DataTable>
+                                <OutArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">dtRapor202</mca:CSharpReference>
+                                </OutArgument>
+                              </ui:ExcelReadRange.DataTable>
+                            </ui:ExcelReadRange>
+                            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_8" Range="A4" SheetName="Rapor209">
+                              <ui:ExcelReadRange.DataTable>
+                                <OutArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">dtRapor209</mca:CSharpReference>
+                                </OutArgument>
+                              </ui:ExcelReadRange.DataTable>
+                            </ui:ExcelReadRange>
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="Rapor273-ForEach" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,477" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="INSERT INTO [dbo].[273] ([TITLE],[ULUSALPUANTDEGERLERI],[TURU],[TARIHI],[SAATI],[DEGER],[OPTIME])  VALUES (@TITLE,@ULUSALPUANTDEGERLERI,@TURU,@TARIHI,@SAATI,@DEGER,GETDATE())">
-                                      <ui:ExecuteNonQuery.ExistingDbConnection>
-                                        <InArgument x:TypeArguments="ui:DatabaseConnection">
-                                          <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">dbConnect</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.ExistingDbConnection>
-                                      <ui:ExecuteNonQuery.Parameters>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TITLE">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">dtTarih.ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="ULUSALPUANTDEGERLERI">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">row["ULUSAL PUANT DEĞERLERİ"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TURU">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">row["TÜRÜ"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDateTime" x:Key="TARIHI">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">Convert.ToDateTime(row["TARİHİ"])</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="SAATI">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">row["SAATİ"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="DEGER">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">row["DEĞER (MW/MWH)"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.Parameters>
-                                    </ui:ExecuteNonQuery>
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,385" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                                      <TryCatch.Variables>
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="sd" />
+                                      </TryCatch.Variables>
+                                      <TryCatch.Finally>
+                                        <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="ui:GenericValue">
+                                              <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">sd</mca:CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="ui:GenericValue">
+                                              <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">1</mca:CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </TryCatch.Finally>
+                                      <TryCatch.Try>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="INSERT INTO [dbo].[273] ([TITLE],[ULUSALPUANTDEGERLERI],[TURU],[TARIHI],[SAATI],[DEGER],[OPTIME])  VALUES (@TITLE,@ULUSALPUANTDEGERLERI,@TURU,@TARIHI,@SAATI,@DEGER,GETDATE())">
+                                            <ui:ExecuteNonQuery.ExistingDbConnection>
+                                              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                                                <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">dbConnect</mca:CSharpValue>
+                                              </InArgument>
+                                            </ui:ExecuteNonQuery.ExistingDbConnection>
+                                            <ui:ExecuteNonQuery.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TITLE">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">dtTarih.ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="ULUSALPUANTDEGERLERI">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">row["ULUSAL PUANT DEĞERLERİ"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TURU">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">row["TÜRÜ"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="sds:SqlDateTime" x:Key="TARIHI">
+                                                <mca:CSharpValue x:TypeArguments="sds:SqlDateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">Convert.ToDateTime(row["TARİHİ"])</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="SAATI">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">row["SAATİ"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="DEGER">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">row["DEĞER (MW/MWH)"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                            </ui:ExecuteNonQuery.Parameters>
+                                          </ui:ExecuteNonQuery>
+                                        </Sequence>
+                                      </TryCatch.Try>
+                                    </TryCatch>
                                   </Sequence>
-                                </TryCatch.Try>
-                              </TryCatch>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                        <ui:ForEachRow.DataTable>
-                          <InArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">dtrpr273</mca:CSharpValue>
-                          </InArgument>
-                        </ui:ForEachRow.DataTable>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:ForEachRow>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="Rapor232-ForEach" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,725" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                              <ui:ForEachRow.DataTable>
+                                <InArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">dtrpr273</mca:CSharpValue>
+                                </InArgument>
+                              </ui:ForEachRow.DataTable>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If sap:VirtualizedContainerService.HintSize="480,208" sap2010:WorkflowViewState.IdRef="If_3">
-                                <If.Condition>
-                                  <InArgument x:TypeArguments="x:Boolean">
-                                    <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">row[0].ToString()=="TOPLAM (MWh)"</mca:CSharpValue>
-                                  </InArgument>
-                                </If.Condition>
-                                <If.Then>
-                                  <ui:Continue sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="Continue_2" />
-                                </If.Then>
-                              </If>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="480,385" sap2010:WorkflowViewState.IdRef="TryCatch_7">
-                                <TryCatch.Variables>
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="sd" />
-                                </TryCatch.Variables>
-                                <TryCatch.Finally>
-                                  <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="ui:GenericValue">
-                                        <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">sd</mca:CSharpReference>
-                                      </OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="ui:GenericValue">
-                                        <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">1</mca:CSharpValue>
-                                      </InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </TryCatch.Finally>
-                                <TryCatch.Try>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="368,180" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                            </ui:ForEachRow>
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="Rapor232-ForEach" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="518,725" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="330,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_6" Sql="INSERT INTO [dbo].[232] ([TITLE],[GUN],[URETIM],[IHRACAT],[ITHALAT],[TUKETIM],[OPTIME])  VALUES (@TITLE,@GUN,@URETIM,@IHRACAT,@ITHALAT,@TUKETIM,GETDATE())">
-                                      <ui:ExecuteNonQuery.ExistingDbConnection>
-                                        <InArgument x:TypeArguments="ui:DatabaseConnection">
-                                          <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">dbConnect</mca:CSharpValue>
+                                    <If sap:VirtualizedContainerService.HintSize="480,208" sap2010:WorkflowViewState.IdRef="If_3">
+                                      <If.Condition>
+                                        <InArgument x:TypeArguments="x:Boolean">
+                                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">row[0].ToString()=="TOPLAM (MWh)"</mca:CSharpValue>
                                         </InArgument>
-                                      </ui:ExecuteNonQuery.ExistingDbConnection>
-                                      <ui:ExecuteNonQuery.Parameters>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TITLE">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">dtTarih.ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDateTime" x:Key="GUN">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">Convert.ToDateTime(row["GÜN"].ToString())</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="URETIM">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">row["ÜRETİM"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="IHRACAT">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">row["İHRACAT"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="ITHALAT">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">row["İTHALAT"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TUKETIM">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">row["TÜKETİM"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.Parameters>
-                                    </ui:ExecuteNonQuery>
+                                      </If.Condition>
+                                      <If.Then>
+                                        <ui:Continue sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                      </If.Then>
+                                    </If>
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="480,385" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                                      <TryCatch.Variables>
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="sd" />
+                                      </TryCatch.Variables>
+                                      <TryCatch.Finally>
+                                        <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="ui:GenericValue">
+                                              <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">sd</mca:CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="ui:GenericValue">
+                                              <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">1</mca:CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </TryCatch.Finally>
+                                      <TryCatch.Try>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="368,180" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="330,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_6" Sql="INSERT INTO [dbo].[232] ([TITLE],[GUN],[URETIM],[IHRACAT],[ITHALAT],[TUKETIM],[OPTIME])  VALUES (@TITLE,@GUN,@URETIM,@IHRACAT,@ITHALAT,@TUKETIM,GETDATE())">
+                                            <ui:ExecuteNonQuery.ExistingDbConnection>
+                                              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                                                <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">dbConnect</mca:CSharpValue>
+                                              </InArgument>
+                                            </ui:ExecuteNonQuery.ExistingDbConnection>
+                                            <ui:ExecuteNonQuery.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TITLE">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">dtTarih.ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="sds:SqlDateTime" x:Key="GUN">
+                                                <mca:CSharpValue x:TypeArguments="sds:SqlDateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">Convert.ToDateTime(row["GÜN"].ToString())</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="URETIM">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">row["ÜRETİM"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="IHRACAT">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">row["İHRACAT"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="ITHALAT">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">row["İTHALAT"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TUKETIM">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">row["TÜKETİM"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                            </ui:ExecuteNonQuery.Parameters>
+                                          </ui:ExecuteNonQuery>
+                                        </Sequence>
+                                      </TryCatch.Try>
+                                    </TryCatch>
                                   </Sequence>
-                                </TryCatch.Try>
-                              </TryCatch>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                        <ui:ForEachRow.DataTable>
-                          <InArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">dtRapor232</mca:CSharpValue>
-                          </InArgument>
-                        </ui:ForEachRow.DataTable>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:ForEachRow>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="Rapor202-ForEach" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="472,477" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                              <ui:ForEachRow.DataTable>
+                                <InArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">dtRapor232</mca:CSharpValue>
+                                </InArgument>
+                              </ui:ForEachRow.DataTable>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,385" sap2010:WorkflowViewState.IdRef="TryCatch_8">
-                                <TryCatch.Variables>
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="sd" />
-                                </TryCatch.Variables>
-                                <TryCatch.Finally>
-                                  <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_11">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="ui:GenericValue">
-                                        <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">sd</mca:CSharpReference>
-                                      </OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="ui:GenericValue">
-                                        <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">1</mca:CSharpValue>
-                                      </InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </TryCatch.Finally>
-                                <TryCatch.Try>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="368,180" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            </ui:ForEachRow>
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="Rapor202-ForEach" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="472,477" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="330,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_7" Sql="INSERT INTO [dbo].[202] ([TITLE],[KURULUS],[URETIM],[%],[OPTIME])  VALUES (@TITLE,@KURULUS,@URETIM,@YUZDE,GETDATE())">
-                                      <ui:ExecuteNonQuery.ExistingDbConnection>
-                                        <InArgument x:TypeArguments="ui:DatabaseConnection">
-                                          <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">dbConnect</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.ExistingDbConnection>
-                                      <ui:ExecuteNonQuery.Parameters>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TITLE">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">dtTarih.ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="KURULUS">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">row["KURULUŞ"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="URETIM">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">row["ÜRETİM (MWh)"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="YUZDE">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">row["%"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.Parameters>
-                                    </ui:ExecuteNonQuery>
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,385" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                                      <TryCatch.Variables>
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="sd" />
+                                      </TryCatch.Variables>
+                                      <TryCatch.Finally>
+                                        <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="ui:GenericValue">
+                                              <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">sd</mca:CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="ui:GenericValue">
+                                              <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">1</mca:CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </TryCatch.Finally>
+                                      <TryCatch.Try>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="368,180" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="330,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_7" Sql="INSERT INTO [dbo].[202] ([TITLE],[KURULUS],[URETIM],[%],[OPTIME])  VALUES (@TITLE,@KURULUS,@URETIM,@YUZDE,GETDATE())">
+                                            <ui:ExecuteNonQuery.ExistingDbConnection>
+                                              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                                                <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">dbConnect</mca:CSharpValue>
+                                              </InArgument>
+                                            </ui:ExecuteNonQuery.ExistingDbConnection>
+                                            <ui:ExecuteNonQuery.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TITLE">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">dtTarih.ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="KURULUS">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">row["KURULUŞ"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="URETIM">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">row["ÜRETİM (MWh)"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="YUZDE">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">row["%"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                            </ui:ExecuteNonQuery.Parameters>
+                                          </ui:ExecuteNonQuery>
+                                        </Sequence>
+                                      </TryCatch.Try>
+                                    </TryCatch>
                                   </Sequence>
-                                </TryCatch.Try>
-                              </TryCatch>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                        <ui:ForEachRow.DataTable>
-                          <InArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">dtRapor202</mca:CSharpValue>
-                          </InArgument>
-                        </ui:ForEachRow.DataTable>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:ForEachRow>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="Rapor209-ForEach" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,477" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                              <ui:ForEachRow.DataTable>
+                                <InArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">dtRapor202</mca:CSharpValue>
+                                </InArgument>
+                              </ui:ForEachRow.DataTable>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,385" sap2010:WorkflowViewState.IdRef="TryCatch_9">
-                                <TryCatch.Variables>
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="sd" />
-                                </TryCatch.Variables>
-                                <TryCatch.Finally>
-                                  <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_12">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="ui:GenericValue">
-                                        <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">sd</mca:CSharpReference>
-                                      </OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="ui:GenericValue">
-                                        <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">1</mca:CSharpValue>
-                                      </InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </TryCatch.Finally>
-                                <TryCatch.Try>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                            </ui:ForEachRow>
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="Rapor209-ForEach" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,477" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_8" Sql="INSERT INTO [dbo].[209] ([TITLE],[GUN],[DOGALGAZ],[LNG],[LINYIT],[TASKOMUR],[ASFALTITKOMUR],[ITHALKOMUR],[FUELOIL],[MOTORIN],[NAFTA],[LPG],[ATIKISI],[BIYOKUTLE],[TERMIK],[JEOTERMAL],[AKARSU],[BARAJLI],[HIDROLIK],[GUNES],[RUZGAR],[TOPLAM],[OPTIME])  VALUES (@TITLE,@GUN,@DOGALGAZ,@LNG,@LINYIT,@TASKOMUR,@ASFALTITKOMUR,@ITHALKOMUR,@FUELOIL,@MOTORIN,@NAFTA,@LPG,@ATIKISI,@BIYOKUTLE,@TERMIK,@JEOTERMAL,@AKARSU,@BARAJLI,@HIDROLIK,@GUNES,@RUZGAR,@TOPLAM,GETDATE())">
-                                      <ui:ExecuteNonQuery.ExistingDbConnection>
-                                        <InArgument x:TypeArguments="ui:DatabaseConnection">
-                                          <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">dbConnect</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.ExistingDbConnection>
-                                      <ui:ExecuteNonQuery.Parameters>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TITLE">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">dtTarih.ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="GUN">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">row["GÜN"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="DOGALGAZ">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">row["DOĞAL GAZ"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="LNG">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">row["LNG"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="LINYIT">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">row["LİNYİT"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TASKOMUR">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">row["TAŞ KÖMÜR"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="ASFALTITKOMUR">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">row["ASFALTİT KÖMÜR"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="ITHALKOMUR">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">row["İTHAL KÖMÜR"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="FUELOIL">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">row["FUEL OİL"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="MOTORIN">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">row["MOTORİN"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="NAFTA">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">row["NAFTA"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="LPG">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">row["LPG"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="ATIKISI">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">row["ATIK ISI"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="BIYOKUTLE">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">row["BİYOKÜTLE"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TERMIK">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">row["TERMİK"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="JEOTERMAL">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">row["JEOTERMAL"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="AKARSU">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">row["AKARSU"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="BARAJLI">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">row["BARAJLI"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="HIDROLIK">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">row["HİDROLİK"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="GUNES">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">row["GÜNEŞ"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="RUZGAR">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">row["RÜZGAR"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="TOPLAM">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">row["TOPLAM (MWh)"].ToString()</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.Parameters>
-                                    </ui:ExecuteNonQuery>
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,385" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                                      <TryCatch.Variables>
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="sd" />
+                                      </TryCatch.Variables>
+                                      <TryCatch.Finally>
+                                        <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="ui:GenericValue">
+                                              <mca:CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">sd</mca:CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="ui:GenericValue">
+                                              <mca:CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">1</mca:CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </TryCatch.Finally>
+                                      <TryCatch.Try>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_8" Sql="INSERT INTO [dbo].[209] ([TITLE],[GUN],[DOGALGAZ],[LNG],[LINYIT],[TASKOMUR],[ASFALTITKOMUR],[ITHALKOMUR],[FUELOIL],[MOTORIN],[NAFTA],[LPG],[ATIKISI],[BIYOKUTLE],[TERMIK],[JEOTERMAL],[AKARSU],[BARAJLI],[HIDROLIK],[GUNES],[RUZGAR],[TOPLAM],[OPTIME])  VALUES (@TITLE,@GUN,@DOGALGAZ,@LNG,@LINYIT,@TASKOMUR,@ASFALTITKOMUR,@ITHALKOMUR,@FUELOIL,@MOTORIN,@NAFTA,@LPG,@ATIKISI,@BIYOKUTLE,@TERMIK,@JEOTERMAL,@AKARSU,@BARAJLI,@HIDROLIK,@GUNES,@RUZGAR,@TOPLAM,GETDATE())">
+                                            <ui:ExecuteNonQuery.ExistingDbConnection>
+                                              <InArgument x:TypeArguments="ui:DatabaseConnection">
+                                                <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">dbConnect</mca:CSharpValue>
+                                              </InArgument>
+                                            </ui:ExecuteNonQuery.ExistingDbConnection>
+                                            <ui:ExecuteNonQuery.Parameters>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TITLE">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">dtTarih.ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="GUN">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">row["GÜN"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="DOGALGAZ">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">row["DOĞAL GAZ"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="LNG">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">row["LNG"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="LINYIT">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">row["LİNYİT"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TASKOMUR">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">row["TAŞ KÖMÜR"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="ASFALTITKOMUR">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">row["ASFALTİT KÖMÜR"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="ITHALKOMUR">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">row["İTHAL KÖMÜR"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="FUELOIL">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">row["FUEL OİL"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="MOTORIN">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">row["MOTORİN"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="NAFTA">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">row["NAFTA"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="LPG">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">row["LPG"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="ATIKISI">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">row["ATIK ISI"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="BIYOKUTLE">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">row["BİYOKÜTLE"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TERMIK">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">row["TERMİK"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="JEOTERMAL">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">row["JEOTERMAL"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="AKARSU">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">row["AKARSU"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="BARAJLI">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">row["BARAJLI"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="HIDROLIK">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">row["HİDROLİK"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="GUNES">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">row["GÜNEŞ"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="RUZGAR">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">row["RÜZGAR"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="TOPLAM">
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">row["TOPLAM (MWh)"].ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                            </ui:ExecuteNonQuery.Parameters>
+                                          </ui:ExecuteNonQuery>
+                                        </Sequence>
+                                      </TryCatch.Try>
+                                    </TryCatch>
                                   </Sequence>
-                                </TryCatch.Try>
-                              </TryCatch>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                        <ui:ForEachRow.DataTable>
-                          <InArgument x:TypeArguments="sd:DataTable">
-                            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">dtRapor209</mca:CSharpValue>
-                          </InArgument>
-                        </ui:ForEachRow.DataTable>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:ForEachRow>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:ExcelApplicationScope.Body>
-                <ui:ExcelApplicationScope.WorkbookPath>
-                  <InArgument x:TypeArguments="x:String">
-                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">"C:\\Download\\"+fileName+".xlsx"</mca:CSharpValue>
-                  </InArgument>
-                </ui:ExcelApplicationScope.WorkbookPath>
-              </ui:ExcelApplicationScope>
-            </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                              <ui:ForEachRow.DataTable>
+                                <InArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">dtRapor209</mca:CSharpValue>
+                                </InArgument>
+                              </ui:ForEachRow.DataTable>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ForEachRow>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ExcelApplicationScope.Body>
+                      <ui:ExcelApplicationScope.WorkbookPath>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">"C:\\Download\\"+fileName+".xlsx"</mca:CSharpValue>
+                        </InArgument>
+                      </ui:ExcelApplicationScope.WorkbookPath>
+                    </ui:ExcelApplicationScope>
+                  </Sequence>
+                </Sequence>
+              </If.Then>
+            </If>
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,129" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="530,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
