@@ -97,6 +97,201 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="GIP Kontrat Ozet" sap:VirtualizedContainerService.HintSize="594,1769" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="552,1550" sap2010:WorkflowViewState.IdRef="OpenBrowser_15" NewSession="True" Private="False" Url="https://rapor.epias.com.tr/rapor/xhtml/gipKontratOzet.xhtml">
+                      <ui:OpenBrowser.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1451" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="Delay_15" />
+                            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  PmumBI:baslangic...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="74fc1c3a1cd99f4b1ad4fc25f5307694" Selector="&lt;webctrl id='PmumBI:baslangicTarihi_input' tag='INPUT' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                              <ui:TypeInto.Text>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_196">DateTime.Now.AddDays(-1).ToString("dd.MM.yyyy")</mca:CSharpValue>
+                                </InArgument>
+                              </ui:TypeInto.Text>
+                            </ui:TypeInto>
+                            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  PmumBI:bitisTari...'" EmptyField="True" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3098d88f7a4e268a1b4f356f54734507" Selector="&lt;webctrl id='PmumBI:bitisTarihi_input' tag='INPUT' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                              <ui:TypeInto.Text>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_197">DateTime.Now.AddDays(-1).ToString("dd.MM.yyyy")</mca:CSharpValue>
+                                </InArgument>
+                              </ui:TypeInto.Text>
+                            </ui:TypeInto>
+                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="476,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="210d21af15d9705cf6d8e4703010d366" Selector="&lt;webctrl parentid='PmumBI:j_idt40' tag='SPAN' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'EP A RAPO Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_17" InformativeScreenshot="c58abe2ee43c58263de6b21f32d95ce4" Selector="&lt;html app='chrome.exe' title='EPİAŞ RAPORLAMA PLATFORMU' /&gt;">
+                                <ui:BrowserScope.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DisplayName="Extract Structured Data 'TABLE'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_17" MaxNumberOfResults="100" SimulateClick="True">
+                                        <ui:ExtractData.DataTable>
+                                          <InOutArgument x:TypeArguments="sd:DataTable">
+                                            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">dtGipKontratOzet</mca:CSharpReference>
+                                          </InOutArgument>
+                                        </ui:ExtractData.DataTable>
+                                        <ui:ExtractData.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1663633870c821ebd1fd9e68309109f4" Selector="&lt;webctrl tag='TABLE' /&gt;" WaitForReady="COMPLETE">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                          </ui:Target>
+                                        </ui:ExtractData.Target>
+                                      </ui:ExtractData>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:BrowserScope.Body>
+                              </ui:BrowserScope>
+                            </Sequence>
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="476,327" sap2010:WorkflowViewState.IdRef="ForEachRow_15">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_15" Sql="INSERT INTO [LET].[GIPKontratOzet_2]([Tarih] ,[Saat],[MaxAlisFiyat],[MinAlisFiyat] ,[MaxSatisFiyat],[MinSatisFiyat],[MaxEslesmeFiyat],[MinEslesmeFiyat],[TeklifEdilenAlisFiyat],[TeklifEdilenSatisFiyat],[KabulEdilenMiktar],[IslemHacmi],[AgirlikliOrtalamaFiyat]) VALUES (@Tarih ,@Saat,@MaxAlisFiyat,@MinAlisFiyat,@MaxSatisFiyat,@MinSatisFiyat,@MaxEslesmeFiyat,@MinEslesmeFiyat,@TeklifEdlnAlisMik,@TeklifEdilenSatisMik,@KabulEdilenMiktar,@IslemHacmi,@AgirlikliOrtalamaFiyat)">
+                                      <ui:ExecuteNonQuery.ExistingDbConnection>
+                                        <InArgument x:TypeArguments="ui:DatabaseConnection">
+                                          <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_169">dbConnect</mca:CSharpValue>
+                                        </InArgument>
+                                      </ui:ExecuteNonQuery.ExistingDbConnection>
+                                      <ui:ExecuteNonQuery.Parameters>
+                                        <InArgument x:TypeArguments="sds:SqlDateTime" x:Key="Tarih">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_170">DateTime.ParseExact("20" + row["Kontrat Adı"].ToString().Substring(2, 2) + "-" + row["Kontrat Adı"].ToString().Substring(4, 2) + "-" + row["Kontrat Adı"].ToString().Substring(6, 2), "yyyy-MM-dd", new System.Globalization.CultureInfo("en-US"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="x:Int32" x:Key="Saat">
+                                          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_171">Convert.ToInt32(row["Kontrat Adı"].ToString().Substring(8, 2))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxAlisFiyat">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_172">Convert.ToDecimal(row["Max Alış Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinAlisFiyat">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_173">Convert.ToDecimal(row["Min Alış Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxSatisFiyat">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">Convert.ToDecimal(row["Max Satış Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinSatisFiyat">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">Convert.ToDecimal(row["Min Satış Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxEslesmeFiyat">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_176">Convert.ToDecimal(row["Max Eşleşme Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinEslesmeFiyat">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_177">Convert.ToDecimal(row["Min Eşleşme Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="TeklifEdlnAlisMik">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_178">Convert.ToDecimal(row["Teklif Edilen Alış Miktar (MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="TeklifEdilenSatisMik">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_179">Convert.ToDecimal(row["Teklif Edilen Satış Miktar (MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="KabulEdilenMiktar">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_180">Convert.ToDecimal(row["Kabul Edilen Miktar (MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="IslemHacmi">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_181">Convert.ToDecimal(row["İşlem Hacmi (TL)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="AgirlikliOrtalamaFiyat">
+                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_182">Convert.ToDecimal(row["Ağırlıklı Ortalama Fiyatı (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
+                                        </InArgument>
+                                      </ui:ExecuteNonQuery.Parameters>
+                                    </ui:ExecuteNonQuery>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                              <ui:ForEachRow.DataTable>
+                                <InArgument x:TypeArguments="sd:DataTable">
+                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_168">dtGipKontratOzet</mca:CSharpValue>
+                                </InArgument>
+                              </ui:ForEachRow.DataTable>
+                            </ui:ForEachRow>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:OpenBrowser.Body>
+                    </ui:OpenBrowser>
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="502,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Araclar\ProcessKill.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
                   <Sequence DisplayName="EnYuksekFiyatData" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_64">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -859,198 +1054,6 @@
                       </ui:OpenBrowser.Body>
                     </ui:OpenBrowser>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="552,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Araclar\ProcessKill.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                  <Sequence DisplayName="GIP Kontrat Ozet" sap:VirtualizedContainerService.HintSize="594,1769" sap2010:WorkflowViewState.IdRef="Sequence_95">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="552,1550" sap2010:WorkflowViewState.IdRef="OpenBrowser_15" NewSession="True" Private="False" Url="https://rapor.epias.com.tr/rapor/xhtml/gipKontratOzet.xhtml">
-                      <ui:OpenBrowser.Body>
-                        <ActivityAction x:TypeArguments="x:Object">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,1451" sap2010:WorkflowViewState.IdRef="Sequence_94">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="Delay_15" />
-                            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  PmumBI:baslangic...'" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_1">
-                              <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="74fc1c3a1cd99f4b1ad4fc25f5307694" Selector="&lt;webctrl id='PmumBI:baslangicTarihi_input' tag='INPUT' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:TypeInto.Target>
-                              <ui:TypeInto.Text>
-                                <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_196">DateTime.Now.AddDays(-1).ToString("dd.MM.yyyy")</mca:CSharpValue>
-                                </InArgument>
-                              </ui:TypeInto.Text>
-                            </ui:TypeInto>
-                            <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  PmumBI:bitisTari...'" sap:VirtualizedContainerService.HintSize="476,134" sap2010:WorkflowViewState.IdRef="TypeInto_2">
-                              <ui:TypeInto.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3098d88f7a4e268a1b4f356f54734507" Selector="&lt;webctrl id='PmumBI:bitisTarihi_input' tag='INPUT' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:TypeInto.Target>
-                              <ui:TypeInto.Text>
-                                <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_197">DateTime.Now.AddDays(-1).ToString("dd.MM.yyyy")</mca:CSharpValue>
-                                </InArgument>
-                              </ui:TypeInto.Text>
-                            </ui:TypeInto>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="476,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition Position="Center">
-                                  <ui:CursorPosition.OffsetX>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetX>
-                                  <ui:CursorPosition.OffsetY>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetY>
-                                </ui:CursorPosition>
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="210d21af15d9705cf6d8e4703010d366" Selector="&lt;webctrl parentid='PmumBI:j_idt40' tag='SPAN' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_92">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'EP A RAPO Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_15" InformativeScreenshot="d041fbe4f7a8feeb76b37cee8e9a6ca7" Selector="&lt;html app='chrome.exe' title='EPİAŞ RAPORLAMA PLATFORMU' /&gt;">
-                                <ui:BrowserScope.Body>
-                                  <ActivityAction x:TypeArguments="x:Object">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                                    </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_91">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ExtractData NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" ContinueOnError="True" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'TABLE'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' /&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_15" MaxNumberOfResults="100">
-                                        <ui:ExtractData.DataTable>
-                                          <InOutArgument x:TypeArguments="sd:DataTable">
-                                            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">dtGipKontratOzet</mca:CSharpReference>
-                                          </InOutArgument>
-                                        </ui:ExtractData.DataTable>
-                                        <ui:ExtractData.Target>
-                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ebc556c29763aa7e0e46f10d9a9ec5bf" Selector="&lt;webctrl tag='TABLE' /&gt;" WaitForReady="COMPLETE">
-                                            <ui:Target.TimeoutMS>
-                                              <InArgument x:TypeArguments="x:Int32" />
-                                            </ui:Target.TimeoutMS>
-                                          </ui:Target>
-                                        </ui:ExtractData.Target>
-                                      </ui:ExtractData>
-                                    </Sequence>
-                                  </ActivityAction>
-                                </ui:BrowserScope.Body>
-                              </ui:BrowserScope>
-                            </Sequence>
-                            <ui:ForEachRow CurrentIndex="{x:Null}" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="476,327" sap2010:WorkflowViewState.IdRef="ForEachRow_15">
-                              <ui:ForEachRow.Body>
-                                <ActivityAction x:TypeArguments="sd:DataRow">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                                  </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_93">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_15" Sql="INSERT INTO [LET].[GIPKontratOzet_2]([Tarih] ,[Saat],[MaxAlisFiyat],[MinAlisFiyat] ,[MaxSatisFiyat],[MinSatisFiyat],[MaxEslesmeFiyat],[MinEslesmeFiyat],[TeklifEdilenAlisFiyat],[TeklifEdilenSatisFiyat],[KabulEdilenMiktar],[IslemHacmi],[AgirlikliOrtalamaFiyat]) VALUES (@Tarih ,@Saat,@MaxAlisFiyat,@MinAlisFiyat,@MaxSatisFiyat,@MinSatisFiyat,@MaxEslesmeFiyat,@MinEslesmeFiyat,@TeklifEdlnAlisMik,@TeklifEdilenSatisMik,@KabulEdilenMiktar,@IslemHacmi,@AgirlikliOrtalamaFiyat)">
-                                      <ui:ExecuteNonQuery.ExistingDbConnection>
-                                        <InArgument x:TypeArguments="ui:DatabaseConnection">
-                                          <mca:CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_169">dbConnect</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.ExistingDbConnection>
-                                      <ui:ExecuteNonQuery.Parameters>
-                                        <InArgument x:TypeArguments="sds:SqlDateTime" x:Key="Tarih">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_170">DateTime.ParseExact("20" + row["Kontrat Adı"].ToString().Substring(2, 2) + "-" + row["Kontrat Adı"].ToString().Substring(4, 2) + "-" + row["Kontrat Adı"].ToString().Substring(6, 2), "yyyy-MM-dd", new System.Globalization.CultureInfo("en-US"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="x:Int32" x:Key="Saat">
-                                          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_171">Convert.ToInt32(row["Kontrat Adı"].ToString().Substring(8, 2))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxAlisFiyat">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_172">Convert.ToDecimal(row["Max Alış Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinAlisFiyat">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_173">Convert.ToDecimal(row["Min Alış Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxSatisFiyat">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">Convert.ToDecimal(row["Max Satış Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinSatisFiyat">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">Convert.ToDecimal(row["Min Satış Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MaxEslesmeFiyat">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_176">Convert.ToDecimal(row["Max Eşleşme Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="MinEslesmeFiyat">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_177">Convert.ToDecimal(row["Min Eşleşme Fiyat (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="TeklifEdlnAlisMik">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_178">Convert.ToDecimal(row["Teklif Edilen Alış Miktar (MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="TeklifEdilenSatisMik">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_179">Convert.ToDecimal(row["Teklif Edilen Satış Miktar (MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="KabulEdilenMiktar">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_180">Convert.ToDecimal(row["Kabul Edilen Miktar (MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="IslemHacmi">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_181">Convert.ToDecimal(row["İşlem Hacmi (TL)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="sds:SqlDecimal" x:Key="AgirlikliOrtalamaFiyat">
-                                          <mca:CSharpValue x:TypeArguments="sds:SqlDecimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_182">Convert.ToDecimal(row["Ağırlıklı Ortalama Fiyatı (TL/MWh)"].ToString(),System.Globalization.CultureInfo.GetCultureInfo("tr-TR"))</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:ExecuteNonQuery.Parameters>
-                                    </ui:ExecuteNonQuery>
-                                  </Sequence>
-                                </ActivityAction>
-                              </ui:ForEachRow.Body>
-                              <ui:ForEachRow.DataTable>
-                                <InArgument x:TypeArguments="sd:DataTable">
-                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_168">dtGipKontratOzet</mca:CSharpValue>
-                                </InArgument>
-                              </ui:ForEachRow.DataTable>
-                            </ui:ForEachRow>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:OpenBrowser.Body>
-                    </ui:OpenBrowser>
-                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="552,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Araclar\ProcessKill.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                       </ui:InvokeWorkflowFile.Arguments>
