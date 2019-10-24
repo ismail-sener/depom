@@ -40,6 +40,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -226,7 +227,7 @@
                             <If sap:VirtualizedContainerService.HintSize="484,236" sap2010:WorkflowViewState.IdRef="If_1">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
-                                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">!row["Gaz Günü"].ToString().Contains("Toplam")</mca:CSharpValue>
+                                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">!row["Gaz Günü"].ToString().Contains("Toplam") &amp;&amp; !row["Gaz Günü"].ToString().Contains("Bulunamadı")</mca:CSharpValue>
                                 </InArgument>
                               </If.Condition>
                               <If.Then>
@@ -267,7 +268,7 @@
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
-                  <Sequence DisplayName="DogalgazRezerveCikisMiktari" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <Sequence DisplayName="DogalgazRezerveCikisMiktari" sap:VirtualizedContainerService.HintSize="618,1918" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Default="INSERT INTO [LET].[DogalgazIletimRezerveCikis] ([GazGunu],[CikisMiktar])VALUES(@GazGunu,@CikisMiktar)" Name="sqlString" />
                       <Variable x:TypeArguments="sd:DataTable" Name="dtIletimRezerveCikisMiktari" />
@@ -406,7 +407,7 @@
                             <If sap:VirtualizedContainerService.HintSize="484,236" sap2010:WorkflowViewState.IdRef="If_3">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
-                                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">!row["Gaz Günü"].ToString().Contains("Toplam")</mca:CSharpValue>
+                                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">!row["Gaz Günü"].ToString().Contains("Toplam") &amp;&amp; !row["Gaz Günü"].ToString().Contains("Bulunamadı")</mca:CSharpValue>
                                 </InArgument>
                               </If.Condition>
                               <If.Then>
